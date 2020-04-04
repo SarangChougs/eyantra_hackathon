@@ -40,7 +40,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -54,18 +54,18 @@
                 Menu
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Pages User Area -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-target="#collapseTwo" aria-expanded="true"
+                <a class="nav-link collapsed" href="{% url 'home' %}" data-target="#collapseTwo" aria-expanded="true"
                     aria-controls="collapseTwo">
                     <i class="fa fa-university"></i>
                     <span>User Area</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{% url 'relative' %}" data-target="#collapseUtilities" aria-expanded="true"
+            <!-- Nav Item - Pages Relatives Area -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="{% url 'relative'}" data-target="#collapseUtilities" aria-expanded="true"
                     aria-controls="collapseUtilities">
                     <i class="fa fa-certificate"></i>
                     <span>Relatives Area</span>
@@ -74,7 +74,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{% url 'doctor'%}" data-target="#collapsePages" aria-expanded="true"
+                <a class="nav-link collapsed" href="{% url 'doctor' %}" data-target="#collapsePages" aria-expanded="true"
                     aria-controls="collapsePages">
                     <i class="fa fa-bolt"></i>
                     <span>Doctor's Area</span>
@@ -317,7 +317,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Live COVID-19 Status</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Yours Relatives Detials</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>

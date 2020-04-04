@@ -6,11 +6,11 @@ from django.contrib.auth.decorators import login_required
 def homepage(request):
     return render(request, 'index.html')
 
-def loginPage(request):
-    return render(request, 'login.html')
+def relativeView(request):
+    return render(request, 'relative.html')
 
-def registerPage(request):
-    return render(request, 'register.html')
+def doctorView(request):
+    return render(request, 'doctor.html')
 
-def forgotPassword(request):
-    return render(request, 'forgot-password.html')
+def reportView(request):
+    return render(request, 'report.html')

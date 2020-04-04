@@ -1,24 +1,22 @@
 from django import forms
-from django.contrib.auth import (
-    authenticate,
-    get_user_model
-)
+from django.contrib.auth import authenticate
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
-User = get_user_model()
 
 # User login form
 class UserLoginForm(forms.Form):
     username = forms.CharField(widget = forms.TextInput(
-        attrs = {
-            'class':'form-control form-control-user',
-            'placeholder':'Enter username',
-        }
+        # attrs = {
+        #     'class':'form-control form-control-user',
+        #     'placeholder':'Enter username',
+        # }
         ))
     password = forms.CharField(widget = forms.PasswordInput(
-        attrs = {
-            'class': 'form-control form-control-user',
-            'placeholder': 'Enter password',
-        }
+        # attrs = {
+        #     'class': 'form-control form-control-user',
+        #     'placeholder': 'Enter password',
+        # }
     ))
 
     #this method is applied every time the form is submitted 
@@ -38,27 +36,7 @@ class UserLoginForm(forms.Form):
         return super(UserLoginForm, self).clean(*args, **kwargs)
 
 # User signup form
-class UserRegisterForm(forms.ModelForm):
-    email = forms.EmailField(label = 'Email address')
-    password = forms.CharField(widget = forms.PasswordInput ,label = 'password')
-    password2 = forms.CharField(widget = forms.PasswordInput, label = 'confirm password')
-
+class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
-        fields = [
-            'username',
-            'email',
-            'password',
-            'password2'
-        ]
-
-    def clean_email(self):
-        email = self.cleaned_data.get('email')
-        password = self.cleaned_data.get('password')
-        password2 = self.cleaned_data.get('password2')
-        if password != password2:
-            raise forms.ValidationError('Password must match ')
-        email_qs = User.objects.filter(email = email)
-        if email_qs.exits():
-            raise forms.ValidationError("This email is already being used")
-        return email
+        fields = ['username','email','password1','password2']

@@ -40,7 +40,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -56,33 +56,33 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-target="#collapseTwo" aria-expanded="true"
+                <a class="nav-link collapsed" href="{% url 'home' %}" data-target="#collapseTwo" aria-expanded="true"
                     aria-controls="collapseTwo">
                     <i class="fa fa-university"></i>
                     <span>User Area</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Nav Item - Pages Relatives Area -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{% url 'relative' %}" data-target="#collapseUtilities" aria-expanded="true"
                     aria-controls="collapseUtilities">
                     <i class="fa fa-certificate"></i>
-                    <span>Relatives Area</span>
+                    <span>Relative's Area</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Pages Doctor's Area -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{% url 'doctor'%}" data-target="#collapsePages" aria-expanded="true"
+                <a class="nav-link collapsed" href="{% url 'doctor' %}" data-target="#collapsePages" aria-expanded="true"
                     aria-controls="collapsePages">
                     <i class="fa fa-bolt"></i>
                     <span>Doctor's Area</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!-- Nav Item - Report -->
+            <li class="nav-item active">
                 <a class="nav-link" href="{% url 'report' %}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Reports</span></a>
@@ -90,7 +90,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw"></i>
                     <span>Log-out</span></a>
             </li>
@@ -317,7 +317,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Live COVID-19 Status</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Reports</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
@@ -332,7 +332,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                <h4>Active Positive Patients</h4>
+                                                <h4>Active positive Patients</h4>
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">112324</div>
                                         </div>

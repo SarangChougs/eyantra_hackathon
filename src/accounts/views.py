@@ -1,19 +1,17 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import (
     authenticate,
-    get_user_model,
     login,
     logout
 )
-from .forms import UserLoginForm, UserRegisterForm
+from .forms import UserLoginForm, CreateUserForm
+from django.contrib import messages
 
 def login_view(request):
-    error = 'none'
     next = request.GET.get('next')
 
     # if the request is post we need to process the form data
     if request.method == 'POST':
-        error = 'Request is post'
         #instantiate the userlogin form and populate it with the data from the request
         form = UserLoginForm(request.POST or None)
         #check whether it is a valid form
@@ -30,14 +28,37 @@ def login_view(request):
                 return redirect(next)
             return redirect('/')
         else:
-            error = 'Please Provide valid data'
+            messages.error(request, form.errors)
     #if get or any other request is passed create a blank form
     else:
         form = UserLoginForm()
-        error = 'Request is not post'
 
     context = {
         'form': form,
-        'error': error
+        'form_errors': form.errors
     }
     return render(request, "login.html", context)
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
+
+def registration_view(request):
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        if form.is_valid:
+            form.save()
+    else:
+        form = CreateUserForm()
+
+    context ={
+        'form':form
+    }
+    return render(request, "register.html", context)
+
+def forgotPasswordView(request):
+    return render(request, "forgot-password.html")
+
+def profileView(request):
+    return render(request, "profile.html")

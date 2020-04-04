@@ -10915,10 +10915,11 @@ a:focus {
 }
 
 .bg-login-image {
-    background: url(../img/login_image.gif);
+    background: url(../img/covid-19.jpg);
     background-position: center;
-    background-size: 300px 350px;
+    background-size: 350px 350px;
     background-repeat: no-repeat;
+    
 }
 
 .bg-register-image {
