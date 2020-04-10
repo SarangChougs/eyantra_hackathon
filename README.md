@@ -11,8 +11,7 @@ We have made a website where
 3. Suspected patients can even check the testing centres near by to their city.
 4. Desirable testing centres are available with their emergency telephone number, Toll-free number, govt. email id.
 5. Anyone using the site will be able to see the total number of corona cases in our country, number of patients discharged, Active Foreign cases and Total deaths due to corona.
- 
-The Solution made for the above discussed issues can be viewed here : 
+  
 
 
 
