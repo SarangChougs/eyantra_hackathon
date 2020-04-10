@@ -16,6 +16,7 @@ The Solution made for the above discussed issues can be viewed here :
 
 
 
+
 SOFTWARE REQUIREMENT :
 For making the WEB APPLICATION we have used 
 1. Django 3 : For Backend
@@ -23,6 +24,7 @@ For making the WEB APPLICATION we have used
 3. Jquery : For Frontend
 4. Database-sqlite3 : For database
 5. API : COVID-19 REST API for India, built by independent developer Amod Malaviya.
+
 
 
 PROCESS FLOW :
