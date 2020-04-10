@@ -13,7 +13,7 @@ We have made a website where
 5. Anyone using the site will be able to see the total number of corona cases in our country, number of patients discharged, Active Foreign cases and Total deaths due to corona.
  
 The Solution made for the above discussed issues can be viewed here : 
-link : 
+
 
 
 SOFTWARE REQUIREMENT :
