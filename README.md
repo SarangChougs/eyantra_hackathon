@@ -26,3 +26,11 @@ For making the WEB APPLICATION we have used
 
 
 PROCESS FLOW :
+1.	Click on the link to open user account page.
+2.	If already registered then enter the login id and password, else create an account.
+3.	After you logged in you enter into the user area .
+4.	Where you can see live status on Covid 19, list of all test centres in India along with emergency details.
+5.	We also have profile area where we have to update all the personal details.
+6.	You need to add your family members, after adding you can update or delete them.
+7.	We are having doctors area where the doctor can add patient.
+8.	Enter the details of his/her patients.
